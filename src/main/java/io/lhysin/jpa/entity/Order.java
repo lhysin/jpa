@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -32,8 +34,8 @@ public class Order extends BaseEntity {
     @Column(unique = true, nullable = false, name = "seq")
     private Long seq;
 
-    @Column(nullable = false, name = "user_seq")
-    private Long userSeq;
+    // @Column(nullable = false, name = "user_seq")
+    // private Long userSeq;
 
     @Column(nullable = false, name = "product_seq")
     private Long productSeq;
@@ -42,6 +44,7 @@ public class Order extends BaseEntity {
     private Long reviewSeq;
 
     @Column(columnDefinition = "enum('REQUESTED','ACCEPTED','SHIPPING','COMPLETED','REJECTED') DEFAULT 'REQUESTED' NOT NULL")
+    @Enumerated(EnumType.STRING)
     private OrderState state;
 
     @Column(length = 1000, nullable = true)

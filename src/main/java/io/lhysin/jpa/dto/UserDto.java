@@ -23,4 +23,5 @@ public class UserDto {
     private Integer loginCount;
     private LocalDateTime lastLoginAt;
     private Collection<OrderDto> orders;
+    private AddressDto addressDto;
 }

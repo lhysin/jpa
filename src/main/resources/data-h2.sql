@@ -25,6 +25,9 @@ INSERT INTO users(seq,name,email,passwd) VALUES (null,'tester23','tester23@gmail
 INSERT INTO users(seq,name,email,passwd) VALUES (null,'tester24','tester24@gmail.com','$2a$10$mzF7/rMylsnxxwNcTsJTEOFhh1iaHv3xVox.vpf6JQybEhE4jDZI.');
 
 
+-- Address 데이터 생성
+INSERT INTO address(seq,user_seq,city,street) VALUES (null,1,'seoul', 'gang');
+
 -- Product 데이터 생성
 INSERT INTO products(seq,name,details,review_count) VALUES (null,'Product A',null,0);
 INSERT INTO products(seq,name,details,review_count) VALUES (null,'Product B','Almost sold out!',1);
